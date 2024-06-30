@@ -11,15 +11,42 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
         }
         header, footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1em 0;
+            width: 100%;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 20px 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         .container {
+            margin-left: 220px;
             padding: 20px;
+            flex-grow: 1;
         }
         .project {
             background-color: #fff;
@@ -44,12 +71,21 @@
     <header>
         <h1>My Portfolio</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#quality-control">Quality Control Tools</a></li>
+            <li><a href="#case-study">Case Study</a></li>
+            <li><a href="#inspection-services">Inspection Services</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p>Hello! I'm [Your Name], a [Your Profession] with a passion for [Your Interests].</p>
         </section>
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <div class="project">
                 <h2>Project 1: Portfolio Website</h2>
@@ -64,11 +100,17 @@
                 <p><a href="https://github.com/username/new-project">View on GitHub</a> | <a href="https://username.github.io/new-project">Live Demo</a></p>
             </div>
         </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></p>
-            <p>Twitter: <a href="https://twitter.com/yourprofile" target="_blank">@yourprofile</a></p>
+        <section id="quality-control">
+            <h2>Quality Control Tools</h2>
+            <p>Details about the quality control tools you use or have developed.</p>
+        </section>
+        <section id="case-study">
+            <h2>Case Study</h2>
+            <p>Information about a specific case study relevant to your work.</p>
+        </section>
+        <section id="inspection-services">
+            <h2>Inspection Services</h2>
+            <p>Details about the inspection services you offer.</p>
         </section>
     </div>
     <footer>
